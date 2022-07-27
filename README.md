@@ -16,4 +16,4 @@ Dans le dossier `./Codes_python` se trouve également un fichier rassemblant les
 
 Le dossier `./Codes_sofa` contient lui deux simulations réalisées avec Sofa et SofaCaribou, ainsi qu'un dossier `codes_caribou_fictitious_grid` dans lequel se trouvent deux codes permettant de tester les résultats obtenus à la suite des modification faites de le code source de Caribou.
 
-Enfin, dans le dossier `./videos_simulations_sofa` se trouvent les résultats vidéos des deux simulations obtenues avec les codes `./Codes_sofa/elastic_ball_bouncing.py` et `./Codes_sofa/liver_beam.py`
+Enfin, dans le dossier `./videos_simulations_sofa` se trouvent les résultats vidéos des deux simulations obtenues avec les codes `./Codes_sofa/elastic_ball_bouncing.py` et `./Codes_sofa/liver_beam.py`.
