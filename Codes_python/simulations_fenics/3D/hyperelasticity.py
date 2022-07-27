@@ -120,8 +120,6 @@ for i in range(start, end, step):
                 break
 
     mesh = df.SubMesh(background_mesh, Cell_omega, 1)
-    hh_phi.append(mesh.hmax())  # store the size of each element for this iteration
-
     # Creation of the FunctionSpace for Phi on the new mesh
     V_phi = df.FunctionSpace(mesh, "CG", degPhi)
     phi = phi_expr(element=V_phi.ufl_element())
