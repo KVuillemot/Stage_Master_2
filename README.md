@@ -1,12 +1,14 @@
 # Stage_Master_2
  
-Ce repository contient les différents codes ainsi que plusieurs simulations, tous réalisés pendant un stage de deuxième année de Master au sein de l'équipe MIMESIS et de l'équipe MLMS. L'un des objectifs de ce stage était d'implémenter un schéma <img src="https://render.githubusercontent.com/render/math?math=\phi">-FEM pour les problèmes hyperélastiques. Pour cela, dans le dossier `./Codes_python/simulations_fenics` se trouvent deux dossiers : `2D` et `3D`. Chaque dossier contient les codes permettant d'appliquer la méthode <img src="https://render.githubusercontent.com/render/math?math=\phi">-FEM et la méthode standard pour les problèmes
-	+ de Poisson avec conditions de Dirichlet pures,
-	+ de Poisson avec conditions de Neumann pures,
-	+ de Poisson avec conditions mixtes,
-	+ de Poisson non-linéaire avec des conditions mixtes,
-	+ d'élasticité linéaire, 
-	+ d'hyperélasticité. 
+Ce repository contient les différents codes ainsi que plusieurs simulations, tous réalisés pendant un stage de deuxième année de Master au sein de l'équipe MIMESIS et de l'équipe MLMS. L'un des objectifs de ce stage était d'implémenter un schéma <img src="https://render.githubusercontent.com/render/math?math=\phi">-FEM pour les problèmes hyperélastiques. Pour cela, dans le dossier `./Codes_python/simulations_fenics` se trouvent deux dossiers : `2D` et `3D`. 
+Chaque dossier contient les codes permettant d'appliquer la méthode <img src="https://render.githubusercontent.com/render/math?math=\phi">-FEM et la méthode standard pour les problèmes
+
+* de Poisson avec conditions de Dirichlet pures,
+* de Poisson avec conditions de Neumann pures,
+* de Poisson avec conditions mixtes,
+* de Poisson non-linéaire avec des conditions mixtes,
+* d'élasticité linéaire, 
+* d'hyperélasticité. 
 
 Dans le cas de problèmes 2D, chaque problème peut être appliqué à un cercle ou à une ellipse, et pour les problèmes 3D, à une sphère ou une ellipsoïde.
  
