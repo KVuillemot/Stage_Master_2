@@ -41,23 +41,23 @@ print(f'{root.grid.boundary_faces()=}')
 print(f'{len(root.grid.boundary_faces())=}')
 
 
-faces = []
+# check the boundary faces with python
+
+faces_python = []
 for cell in root.grid.boundary_cells_indices()[0]:
-    faces += root.grid.face_cell_indices(cell)
+    faces_python += root.grid.face_cell_indices(cell)
 
-print(len(faces))
-unique_faces = list(set(faces))
-print(len(unique_faces))
+print(len(faces_python))
+unique_faces_python = list(set(faces_python))
+print(f'{unique_faces_python=}')
 
-
-
-faces_outside = []
+faces_python_outside = []
 for cell in root.grid.boundary_cells_indices()[2]:
-    faces_outside += root.grid.face_cell_indices(cell)
+    faces_python_outside += root.grid.face_cell_indices(cell)
 
-print(len(faces_outside))
-unique_faces_outside = list(set(faces_outside))
-print(len(unique_faces_outside))
+print(len(faces_python_outside))
+unique_faces_python_outside = list(set(faces_python_outside))
+print(len(unique_faces_python_outside))
 
 
 def common_member(a, b):     
@@ -71,8 +71,16 @@ def common_member(a, b):
         return("no common elements") 
       
    
-common = list(common_member(unique_faces, unique_faces_outside))
+common = list(common_member(unique_faces_python, unique_faces_python_outside))
 for index in common :
-    unique_faces.remove(index)
+    unique_faces_python.remove(index)
+unique_faces_python.sort()
+# end check boundary faces with python
 
-print(len(unique_faces))
+faces_sofa = root.grid.boundary_faces()
+
+print(f'faces_python = {unique_faces_python}')
+print(f'len(faces_python) = {len(unique_faces_python)}')
+faces_sofa.sort()
+print(f'faces_sofa = {faces_sofa}')
+print(f'len(faces_sofa) = {len(faces_sofa)}')
