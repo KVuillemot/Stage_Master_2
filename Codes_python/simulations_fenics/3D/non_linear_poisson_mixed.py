@@ -311,7 +311,7 @@ for i in range(start, end, step):
 
     auz = gamma_u * df.inner((1.0 + u * u) * df.grad(u), z) * dx(Neumann)
     auq_N = 0.0
-    auq_D = -gamma_D * h ** (-3) * u * q_D * phi * dx(Dirichlet)
+    auq_D = -gamma_D * h ** (-2) * u * q_D * phi * dx(Dirichlet)
 
     ayv = df.inner(y, n) * v * ds(Neumann) + gamma_u * df.inner(
         y, (1.0 + u * u) * df.grad(v)
@@ -333,10 +333,10 @@ for i in range(start, end, step):
     ap_Nq_N = gamma_p * h ** (-4) * p_N * phi * q_N * phi * dx(Neumann)
     ap_Nq_D = 0.0
 
-    ap_Dv = -gamma_D * h ** (-3) * v * p_D * phi * dx(Dirichlet)
+    ap_Dv = -gamma_D * h ** (-2) * v * p_D * phi * dx(Dirichlet)
     ap_Dz = 0.0
     ap_Dq_N = 0.0
-    ap_Dq_D = gamma_D * h ** (-4) * p_D * phi * q_D * phi * dx + sigma_p * df.avg(
+    ap_Dq_D = gamma_D * h ** (-2) * p_D * phi * q_D * phi * dx + sigma_p * df.avg(
         h
     ) ** (-1) * df.inner(df.jump(p_D * phi), df.jump(q_D * phi)) * dS(Dirichlet)
 
@@ -350,7 +350,7 @@ for i in range(start, end, step):
         -2
     ) * g * phi_abs * df.inner(z, df.grad(phi)) * dx(Neumann)
     lq_N = -gamma_p * h ** (-3) * g * phi_abs * q_N * phi * dx(Neumann)
-    lq_D = -gamma_D * h ** (-3) * u_D * q_D * phi * dx(Dirichlet)
+    lq_D = -gamma_D * h ** (-2) * u_D * q_D * phi * dx(Dirichlet)
 
     F = [
         auv + ayv + ap_Nv + ap_Dv - lv,
